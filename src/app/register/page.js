@@ -5,7 +5,10 @@ export default function Page() {
   const [code, setCode] = useState('');
 
   const registerList = async () => {
-    const response = await fetch('/api/register', { method: 'POST' });
+    const response = await fetch('/api/register', {
+      method: 'POST' ,
+      headers: { 'Content-Type': 'application/json' }
+    });
     const data = await response.json();
     setCode(data.code);
   }
