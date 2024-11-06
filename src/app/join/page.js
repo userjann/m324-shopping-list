@@ -37,5 +37,5 @@ export default function Page() {
       <button onClick={joinList}>Beitreten</button>
       {joined && <p>Erfolgreich beigetreten!</p>}
     </div>
-  );
+  )
 }
