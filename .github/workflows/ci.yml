@@ -13,22 +13,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: 🏗️ Set up Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: 📦 Install dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: 🔍 Run Linting (vorerst mit echo)
-        run: echo "Linting läuft hier später mit npm run lint"
+      - name: Run Linting
+        run: npm run lint
 
-      - name: 🧪 Run Tests (vorerst mit echo)
-        run: echo "Tests laufen hier später mit npm test"
+      - name: Run Tests
+        run: npm test
 
-      - name: 🏗️ Run Build
+      - name: Run Build
         run: npm run build
